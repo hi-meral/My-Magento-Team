@@ -1,0 +1,19 @@
+
+
+Loom Videos for Functionality Evidence
+Developer : Miral Maradia
+
+
+1) Setup of the platform
+https://www.loom.com/share/f7492211520e446fa0ecaff379c4e0fa
+
+
+2) Magento Installation and setup
+https://www.loom.com/share/0a28e490dc31476896b0a18774a0021d
+
+
+3) Module and Page Creation
+https://www.loom.com/share/3e0c5412b036480ca082b5c71e90ba36
+
+
+
