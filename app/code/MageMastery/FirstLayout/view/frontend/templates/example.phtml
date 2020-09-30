@@ -1,6 +1,14 @@
-  <h1> Assignment 2 </h1>
+<?php
+use Magento\Framework\View\Element\Template;
+/** @var Template $block */
+?>
+<h1>Second Assignment</h1>
+
+<p><h2><?= $block->getData('greeting_param'); ?></h2></p>
+
+<p>
+<img data-bind="attr: { src: require.toUrl('<?= $block->getData('image_param');?>') }" />
+</p>
 
 
-  <h2> Hello World </h2>
 
-  
