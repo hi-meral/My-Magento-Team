@@ -13,13 +13,7 @@ class View extends Action
 {
     public function execute()
     {
-        /** @var Page $page */
-        $page = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-
-        /** @var Template $block */
-        $block = $page->getLayout()->getBlock('magemastery.first.layout.example');
-        $block->setData('custom_parameter', 'Data from the Controller');
-
-        return $page;
+        /** @var Page $resultPage */
+        return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
     }
 }
