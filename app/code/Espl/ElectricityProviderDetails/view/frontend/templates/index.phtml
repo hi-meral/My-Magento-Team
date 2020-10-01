@@ -1,0 +1,22 @@
+<form method="post" action="<?= $block->getAddProviderPostUrl() ?>">
+   <fieldset>
+       <div>
+            <label for="provider_name"><?= __("Provider Name") ?></label>
+           <input type="text" name="provider_name" id="provider_name" />
+      </div>
+      <div>
+            <label for="contact_number"><?= __("Provider Contact No.") ?></label>
+           <input type="text" name="contact_number" id="contact_number" />
+      </div>
+      <div>
+            <label for="contact_email"><?= __("Provider Email") ?></label>
+           <input type="text" name="contact_email" id="contact_email" />
+      </div>
+      <div>
+            <label for="terms_in_months"><?= __("Plan Term in Months") ?></label>
+           <input type="number" name="terms_in_months" id="terms_in_months" />
+      </div>
+      <input type="submit" value="<?= __("Add Provider") ?>" />
+   </fieldset>
+</form>
+<h2>Hello World</h2>
