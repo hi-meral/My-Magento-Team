@@ -4,19 +4,19 @@
 <h2><?= $block->getAddEmployeeText() ?></h2>
 
 <form method="post" action="<?= $block->getAddEmployeeUrl() ?>">
-  <fieldset>
-    <div>
+  <div style="width : 50%">
+    <div style="margin-bottom: 20px;">
       <label for="name"><?= __("Employee Name") ?></label>
       <input type="text" name="name" id="name" />
     </div>
-    <div>
+    <div style="margin-bottom: 20px;">
       <label for="contact_number"><?= __("Contact No.") ?></label>
       <input type="text" name="contact_number" id="contact_number" />
     </div>
-    <div>
+    <div style="margin-bottom: 20px;">
       <label for="email"><?= __("Email") ?></label>
       <input type="text" name="email" id="email" />
     </div>
-    <input type="submit" value="<?= __("Add Employee") ?>" />
-  </fieldset>
+    <input type="submit" style="font-size : 16px; width: 140px; height: 30px;" value="<?= __("Add Employee") ?>" />
+  </div>
 </form>
