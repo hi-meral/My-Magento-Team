@@ -6,3 +6,6 @@ https://www.loom.com/share/8b6b5f27316f424a94b8127a62a43247
 
 2) Plugin(Interceptor) to increase the product price by 50 when added to cart
 https://www.loom.com/share/026cb1cbaf6740d882032faa0c5099d3
+
+3) Form data submit in custom database table
+https://www.loom.com/share/f5e995554f1647d19f07d1301995a3a8

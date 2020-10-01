@@ -1,0 +1,19 @@
+<div class="col-sm-6">
+<form method="post" action="<?=$block->getAddBookPostUrl()?>">
+   <fieldset>
+        <div>
+            <label for="book_name"><?= __("book_name") ?></label>
+           <input type="text" name="book_name" id="book_name" />
+        </div>
+        <div>
+            <label for="author_name"><?= __("author_name") ?></label>
+           <input type="text" name="author_name" id="author_name" />
+        </div>
+        <div>
+            <label for="price"><?= __("price") ?></label>
+           <input type="text" name="price" id="price" />
+        </div>        
+      <input type="submit" value="<?= __("Add Book") ?>" />
+   </fieldset>
+</form>
+</div>
