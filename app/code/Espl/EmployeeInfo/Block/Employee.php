@@ -11,11 +11,44 @@
 namespace Espl\EmployeeInfo\Block;
 
 use Magento\Framework\View\Element\Template;
+use Espl\EmployeeInfo\Model\ResourceModel\Employee\Collection;
 
 class Employee extends Template
 {
-  public function getText()
+
+  /**
+   * @var Collection
+   */
+  private $collection;
+
+  /**
+   * Employee constructor.
+   * @param Template\Context $context
+   * @param Collection $collection
+   * @param array $data
+   */
+  public function __construct(
+    Template\Context $context,
+    Collection $collection,
+    array $data = []
+  ) {
+    parent::__construct($context, $data);
+    $this->collection = $collection;
+  }
+  public function getAddEmployeeText()
   {
-    return "Hello World";
+    return "Add Employee";
+  }
+
+  
+
+  public function getAllEmployees()
+  {
+    return $this->collection;
+  }
+
+  public function getAddEmployeeUrl()
+  {
+    return $this->getUrl('employeeinfo/employee/add');
   }
 }

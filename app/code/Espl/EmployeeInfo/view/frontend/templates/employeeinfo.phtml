@@ -1,5 +1,22 @@
 <?php
 /* @var \Espl\EmployeeInfo\Block\Employee $block */
 ?>
-<label><?= __("Data retrieved from Block is ") ?></label>
-<h1><?= $block->getText() ?></h1>
+<h2><?= $block->getAddEmployeeText() ?></h2>
+
+<form method="post" action="<?= $block->getAddEmployeeUrl() ?>">
+  <fieldset>
+    <div>
+      <label for="name"><?= __("Employee Name") ?></label>
+      <input type="text" name="name" id="name" />
+    </div>
+    <div>
+      <label for="contact_number"><?= __("Contact No.") ?></label>
+      <input type="text" name="contact_number" id="contact_number" />
+    </div>
+    <div>
+      <label for="email"><?= __("Email") ?></label>
+      <input type="text" name="email" id="email" />
+    </div>
+    <input type="submit" value="<?= __("Add Employee") ?>" />
+  </fieldset>
+</form>
