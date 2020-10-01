@@ -6,3 +6,6 @@ https://www.loom.com/share/a8f5c8c720fe48158881e37825b70212
 
 2) Plugin Development for increasing price of product by $50
 https://www.loom.com/share/6d7bbf974dac46d296b596d47cd5291f
+
+3) Custom Table creation and Saving Data from Frontend
+https://www.loom.com/share/751bac3b3a55474e9d411ade48534cc5
