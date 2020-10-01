@@ -3,11 +3,18 @@ Developer : Bharatkumar Patil
 
 Task 1: Magento 2.3.0 installation
 
-1) Task 2: Module and Page Creation with text "Welcome to Espl.com"
+// Module Development
+Task 2: Module and Page Creation with text "Welcome to Espl.com"
 https://www.loom.com/share/34384dd47d5245cbbdcf55f9b9c37df3
 
-2) Task 2: Added Logo with text in Module and Page Creation
+Task 2: Added Logo with text in Module and Page Creation
 https://www.loom.com/share/eda463f5d6d846c7a7a5946e3924e5d4
 
-3) Task 3: Added plugin to convert product discription text to link
+// Plugin Development
+Task 3: Added plugin to convert product discription text to link
 https://www.loom.com/share/6e70cb90cd5c44d8a40da1237e8ea9e5
+
+// Magento ORM & Admin Grids
+// Phase 1
+Task 4: Add Employee form and data entry to database
+https://www.loom.com/share/d0ff776f9d6646018fa12b42879a9d22
