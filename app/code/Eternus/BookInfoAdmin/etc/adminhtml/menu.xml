@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Eternus_BookInfoAdmin::booksection" title="Books" module="Eternus_BookInfoAdmin" sortOrder="51" resource="Eternus_BookInfoAdmin::bookinfoadmin"/>
+        <add id="Eternus_BookInfoAdmin::bookrecords" title="Book Records" module="Eternus_BookInfoAdmin" sortOrder="10" action="eternus_bookinfoadmin/records" resource="Eternus_BookInfoAdmin::records" parent="Eternus_BookInfoAdmin::booksection"/>        
+    </menu>
+</config>
