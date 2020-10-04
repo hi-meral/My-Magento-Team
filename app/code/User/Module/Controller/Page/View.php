@@ -20,8 +20,4 @@ class View extends Action
         return $page;
     }
 
-    public function getAddProviderPostUrl() {
-        return $this->getUrl('module/service/postuserservice');
-
-    }
 }
