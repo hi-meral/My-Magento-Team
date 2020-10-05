@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Espl_ElectricityProviderAdmin::providers" title="Electricity Providers" module="Espl_ElectricityProviderAdmin" sortOrder="51" resource="Espl_ElectricityProviderAdmin::providers"/>
+        <add id="Espl_ElectricityProviderAdmin::manage_provider" title="Providers List" module="Espl_ElectricityProviderAdmin" sortOrder="10" action="ElectricityProviderAdmin/index" resource="Espl_ElectricityProviderAdmin::manage_provider" parent="Espl_ElectricityProviderAdmin::providers"/>
+    </menu>
+</config>

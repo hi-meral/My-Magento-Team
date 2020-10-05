@@ -5,6 +5,7 @@ return [
         'Magento_Directory' => 1,
         'Magento_Theme' => 1,
         'Magento_Backend' => 1,
+        'Espl_ElectricityProviderAdmin' => 1,
         'Espl_ElectricityProviderDetails' => 1,
         'Espl_HelloWorld' => 1,
         'Espl_UpdateProductPrice' => 1,
