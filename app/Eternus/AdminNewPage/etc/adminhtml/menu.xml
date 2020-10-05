@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="Eternus_AdminNewPage::users" title="Users" translate="title" module="Eternus_AdminNewPage" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="Eternus_AdminNewPage" resource="Eternus_AdminNewPage::users"/>
+      <add id="Eternus_AdminNewPage::users_usergrid" title="User_Grid" translate="title" module="Eternus_AdminNewPage" parent="Eternus_AdminNewPage::users" sortOrder="10" dependsOnModule="Eternus_AdminNewPage" action="adminnewpage/usergrid" resource="Eternus_AdminNewPage::users"/>
+    </menu>
+</config>
