@@ -1,5 +1,6 @@
 <?php
 namespace Mageplaza\HelloWorld\Model;
+
 class Post extends \Magento\Framework\Model\AbstractModel implements \Magento\Framework\DataObject\IdentityInterface
 {
     const CACHE_TAG = 'mageplaza_helloworld_post';
