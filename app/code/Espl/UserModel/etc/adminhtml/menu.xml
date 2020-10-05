@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<menu>
+    <add id="Espl_UserModel::userdata" title="Users Data" module="Espl_UserModel" sortOrder="10" resource="Espl_UserModel::usersdatagrid"/>
+    <add id="Espl_UserModel::userdatagrid" title="Listing" module="Espl_UserModel" sortOrder="10" action="usersdatagrid/records" resource="Espl_UserModel::records" parent="Espl_UserModel::userdata" />
+</menu>
+</config>
