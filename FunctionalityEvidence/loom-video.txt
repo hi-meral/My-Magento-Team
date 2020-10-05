@@ -12,3 +12,6 @@ https://www.loom.com/share/f5e995554f1647d19f07d1301995a3a8
 
 4) Submitted from data from custom database table should be displayed in admin grid on admin side
 https://www.loom.com/share/480e037c2603412a8d3a2fb650a56c75
+
+5) added filters to admin grid as per requested on call
+https://www.loom.com/share/be4e75e20b374cb3a9f26fab272aa0c9

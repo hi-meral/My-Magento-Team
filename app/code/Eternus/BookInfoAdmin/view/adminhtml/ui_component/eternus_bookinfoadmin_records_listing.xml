@@ -4,9 +4,7 @@
             <item name="provider" xsi:type="string">eternus_bookinfoadmin_records_listing.eternus_bookinfoadmin_records_listing_data_source</item>
             <item name="deps" xsi:type="string">eternus_bookinfoadmin_records_listing.eternus_bookinfoadmin_records_listing_data_source</item>
         </item>
-        <item name="spinner" xsi:type="string">spinner_columns</item> 
-        <item name="buttons" xsi:type="array">           
-        </item>       
+        <item name="spinner" xsi:type="string">spinner_columns</item>               
     </argument>
     <dataSource name="nameOfDataSource">
         <argument name="dataProvider" xsi:type="configurableObject">
@@ -25,6 +23,11 @@
             </argument>
         </argument>
     </dataSource>
+    <listingToolbar name="listing_top">
+
+     <filters name="listing_filters" />
+
+     </listingToolbar>
     <columns name="spinner_columns">
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
