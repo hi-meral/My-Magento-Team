@@ -1,0 +1,21 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="espl_employeesmenu_index_listing_data_source" xsi:type="string">
+					Espl\EmployeesMenu\Model\ResourceModel\Employee\Collection
+				</item>
+			</argument>
+		</arguments>
+	</type>
+	<virtualType name="Espl\EmployeesMenu\Model\ResourceModel\Employee\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">
+				espl_employee
+			</argument>
+			<argument name="resourceModel" xsi:type="string">
+				Espl\EmployeesMenu\Model\ResourceModel\Employee
+			</argument>
+		</arguments>
+	</virtualType>
+</config>

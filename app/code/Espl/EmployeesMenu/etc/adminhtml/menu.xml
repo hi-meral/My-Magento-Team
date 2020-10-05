@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Espl_EmployeesMenu::employeesmenu" title="Employee" translate="title" module="Espl_EmployeesMenu" sortOrder="20" resource="Espl_EmployeesMenu::employeesmenu" />
+		<add id="Espl_EmployeesMenu::all_employees" title="All Employees" translate="title" module="Espl_EmployeesMenu" sortOrder="10" resource="Espl_EmployeesMenu::all_employees" parent="Espl_EmployeesMenu::employeesmenu" action="espl_employeesmenu/index" />
+	</menu>
+</config>
