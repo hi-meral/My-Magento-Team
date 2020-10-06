@@ -15,3 +15,12 @@ https://www.loom.com/share/480e037c2603412a8d3a2fb650a56c75
 
 5) added filters to admin grid as per requested on call
 https://www.loom.com/share/be4e75e20b374cb3a9f26fab272aa0c9
+
+6)Created 3 types of products(Simple, Configurable, Bundle) & get the information of those using REST API.
+Below are the two methods by which we can create Access Token to consume magento APIs
+
+API consumption using token created by admin side:
+https://www.loom.com/share/48e0b1974915447581ceb5b132f9ca11
+
+API consumption using token created VIA admin token POST API call
+https://www.loom.com/share/7afb938e563a4272be7d4c7d72c5e3e7
