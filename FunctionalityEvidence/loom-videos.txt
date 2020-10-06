@@ -12,3 +12,10 @@ https://www.loom.com/share/751bac3b3a55474e9d411ade48534cc5
 
 4) Admin Grid Display Data and Filter the data
 https://www.loom.com/share/f407f4cbd8e24fbbaae003e13e85049e
+
+5) Create Simple, Configurable and Bundled Product and Call REST API in postman (Token generated using Integration Admin)
+https://www.loom.com/share/0d08beeca6a94d99b513eaf8331d6fc5
+
+Call REST API by generating token for admin using Postman
+https://www.loom.com/share/3d1cf7bcd94947a2b01e0f0f2e819d77
+ 

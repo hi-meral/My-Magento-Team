@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "fe1d7210-d66d-4cae-b740-6feb43935959",
+		"name": "Magento v2.3.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Admin Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/integration/admin/token",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"integration",
+						"admin",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/products?searchCriteria[pageSize]=20",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "searchCriteria[pageSize]",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Products name and sku ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/products?searchCriteria[pageSize]=20&fields=items[name,sku]",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "searchCriteria[pageSize]",
+							"value": "20"
+						},
+						{
+							"key": "fields",
+							"value": "items[name,sku]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Configurable Product's name, sku and type ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/products?searchCriteria[filter_groups][0][filters][0][field]=type_id&searchCriteria[filter_groups][0][filters][0][value]=configurable&fields=items[name,sku,type_id]",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "searchCriteria[filter_groups][0][filters][0][field]",
+							"value": "type_id"
+						},
+						{
+							"key": "searchCriteria[filter_groups][0][filters][0][value]",
+							"value": "configurable"
+						},
+						{
+							"key": "fields",
+							"value": "items[name,sku,type_id]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
