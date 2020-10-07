@@ -22,7 +22,7 @@ snehal kale
 
 
 7) Capstone Project (part 1 -Create a custom Payment Gateway) 
-                    (part 2 -Create a custom Shipping Method.)  
+                    (part 2 -Create a custom Shipping Method)  
 
      : https://www.loom.com/share/1d5db5e7dd0348d8acc9a2333289f130
    
