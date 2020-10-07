@@ -9,10 +9,21 @@ snehal kale
 2) Assignment 2 : https://www.loom.com/share/6f964943300945878980613e7acc6f7f
 
 
-3) Assignment 3 : https://www.loom.com/share/f03c07d17f7b40e293f02e8d992d0daf
+3) Assignment 3(Plugin Development ) : https://www.loom.com/share/f03c07d17f7b40e293f02e8d992d0daf
 
 
 4) Assignment 4(part1- user-form) : https://www.loom.com/share/b20e714825014cefbb8ff2f95510bd86
 
 
 5) Assignment 4(part2- admin-grid) : https://www.loom.com/share/38343408473b43af86aceb4acba8c01f
+
+
+6) Assignment 5 (Magento API ) : https://www.loom.com/share/4a1ab8db184b4a8396abcc34fcf93886
+
+
+7) Capstone Project (part 1 -Create a custom Payment Gateway) 
+                    (part 2 -Create a custom Shipping Method.)  
+
+     : https://www.loom.com/share/1d5db5e7dd0348d8acc9a2333289f130
+   
+  
