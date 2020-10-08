@@ -25,5 +25,9 @@ snehal kale
                     (part 2 -Create a custom Shipping Method)  
 
      : https://www.loom.com/share/1d5db5e7dd0348d8acc9a2333289f130
+
+8) Capstone Project (part 3&4 - Rest Api)
+
+     : https://www.loom.com/share/df0e77456ee14bc2bfed1c6a70e6a9e2
    
   
