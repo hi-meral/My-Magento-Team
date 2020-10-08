@@ -10,9 +10,32 @@
 			"name": "GetAllProducts",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 8szgv3mav20xil260z61n9f86h7dinul",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost.magentov230.com/rest/V1/products?searchCriteria[pageSize]=20",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "searchCriteria[pageSize]",
+							"value": "20"
+						}
+					]
 				}
 			},
 			"response": []
@@ -20,10 +43,33 @@
 		{
 			"name": "AdminTokenRequest",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost.magentov230.com/index.php/rest/V1/integration/admin/token",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"rest",
+						"V1",
+						"integration",
+						"admin",
+						"token"
+					]
 				}
 			},
 			"response": []
@@ -32,9 +78,40 @@
 			"name": "GetProductFields",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 8szgv3mav20xil260z61n9f86h7dinul",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost.magentov230.com/rest/V1/products?searchCriteria[filter_groups][0][filters][0][field]=type_id&searchCriteria[filter_groups][0][filters][0][value]=bundle&fields=items[sku,name]",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "searchCriteria[filter_groups][0][filters][0][field]",
+							"value": "type_id"
+						},
+						{
+							"key": "searchCriteria[filter_groups][0][filters][0][value]",
+							"value": "bundle"
+						},
+						{
+							"key": "fields",
+							"value": "items[sku,name]"
+						}
+					]
 				}
 			},
 			"response": []
@@ -43,9 +120,516 @@
 			"name": "GetCategories",
 			"request": {
 				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 8szgv3mav20xil260z61n9f86h7dinul",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/categories",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EstimateShippingMethods",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8tuuc5dmawmcgiuwz9rwi0ny1j5ploy7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": {\n    \"region\": \"New York\",\n    \"region_id\": 43,\n    \"region_code\": \"NY\",\n    \"country_id\": \"US\",\n    \"street\": [\n      \"123 Oak Ave\"\n    ],\n    \"postcode\": \"10577\",\n    \"city\": \"Purchase\",\n    \"firstname\": \"Kunal\",\n    \"lastname\": \"Dusane\",\n    \"customer_id\": 1,\n    \"email\": \"kunal.dusane@eternussolutions.com\",\n    \"telephone\": \"(512) 555-1111\",\n    \"same_as_billing\": 1\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/default/V1/carts/mine/estimate-shipping-methods",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"default",
+						"V1",
+						"carts",
+						"mine",
+						"estimate-shipping-methods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customerToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"kunal.dusane@eternussolutions.com\",\n    \"password\":\"espl@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/index.php/rest/V1/integration/customer/token",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"index.php",
+						"rest",
+						"V1",
+						"integration",
+						"customer",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerCarts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "rpvcmm6633r9gzhxdb5q86cofix3wmip",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer okpqfabr5ibejo1bewe5e79m2ly0u1co",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/carts/mine",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "g80puckaekyxdwrpk4kekyohlmesut3o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"paymentMethod\":{\"method\":\"simple\"},\n\n  \"shippingMethod\":\n\n     {\n\n       \"method_code\":\"simpleshipping\",\n\n       \"carrier_code\":\"simpleshipping\"\n\n     },\n\n     \"addressInformation\": {\n\n       \"shipping_address\": {\n\n        \"region\": \"New York\",\n\n        \"region_id\": 43,\n\n        \"region_code\": \"NY\",\n\n        \"country_id\": \"US\",\n\n        \"street\": [\n\n       \"123 Oak Ave\"\n\n     ],\n\n     \"postcode\": \"10577\",\n\n     \"city\": \"Purchase\",\n\n     \"firstname\": \"Jane\",\n\n     \"lastname\": \"Doe\",\n\n     \"email\": \"jdoe@example.com\",\n\n     \"telephone\": \"512-555-1111\"\n\n   },\n\n   \"billing_address\": {\n\n       \"region\": \"New York\",\n\n     \"region_id\": 43,\n\n     \"region_code\": \"NY\",\n\n     \"country_id\": \"US\",\n\n     \"street\": [\n\n       \"123 Oak Ave\"\n\n     ],\n\n     \"postcode\": \"10577\",\n\n     \"city\": \"Purchase\",\n\n     \"firstname\": \"Jane\",\n\n     \"lastname\": \"Doe\",\n\n     \"email\": \"jdoe@example.com\",\n\n     \"telephone\": \"512-555-1111\"\n\n   }\n\n   }\n\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/carts/mine/order",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentMethod",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "g80puckaekyxdwrpk4kekyohlmesut3o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"addressInformation\": {\n    \"shipping_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"Jane\",\n      \"lastname\": \"Doe\",\n      \"email\": \"jdoe@example.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"billing_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"Jane\",\n      \"lastname\": \"Doe\",\n      \"email\": \"jdoe@example.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"shipping_carrier_code\": \"simpleshipping\",\n    \"shipping_method_code\": \"simpleshipping\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/default/V1/carts/mine/payment-methods",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"default",
+						"V1",
+						"carts",
+						"mine",
+						"payment-methods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setbillingaddress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ub96tad4231pxxyz57zaiu2x835ppfei",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"addressInformation\": {\n    \"shipping_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"kunal\",\n      \"lastname\": \"Dusane\",\n      \"email\": \"kunal.dusane@eternussolutions.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"billing_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"Kunal\",\n      \"lastname\": \"Dusane\",\n      \"email\": \"kunal.dusane@eternussolutions.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"shipping_carrier_code\": \"simpleshipping\",\n    \"shipping_method_code\": \"simpleshipping\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/carts/mine/shipping-information",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"shipping-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderusingpaymentinfoAPI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "g80puckaekyxdwrpk4kekyohlmesut3o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"paymentMethod\": {\n    \"method\": \"simple\"\n  },\n  \"billing_address\": {\n    \"email\": \"kunal.dusane@eternussolutions.com\",\n    \"region\": \"New York\",\n    \"region_id\": 43,\n    \"region_code\": \"NY\",\n    \"country_id\": \"US\",\n    \"street\": [\n      \"123 Oak Ave\"\n    ],\n    \"postcode\": \"10577\",\n    \"city\": \"Purchase\",\n    \"telephone\": \"512-555-1111\",\n    \"firstname\": \"kunal\",\n    \"lastname\": \"dusane\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/carts/mine/payment-information",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"payment-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateInvoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "q736u6lqluumgl3h22ymmb2yji2axpn4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"capture\": true,\n  \"notify\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/order/4/invoice",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"order",
+						"4",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInvoice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "q736u6lqluumgl3h22ymmb2yji2axpn4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"capture\": true,\n  \"notify\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/invoices/1",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"invoices",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderByID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "q736u6lqluumgl3h22ymmb2yji2axpn4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost.magentov230.com/rest/V1/orders/3",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShipment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "q736u6lqluumgl3h22ymmb2yji2axpn4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"order_item_id\": 3,\n      \"qty\": 1\n    }\n  ],\n  \"tracks\": [\n    {\n      \"track_number\": \"1K-9876543210\",\n      \"title\": \"Eternus Custom Shipping Method\",\n      \"carrier_code\": \"SimpleShipping\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/order/4/ship",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"order",
+						"4",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewShipment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "q736u6lqluumgl3h22ymmb2yji2axpn4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost.magentov230.com/rest/V1/shipment/1",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magentov230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"shipment",
+						"1"
+					]
 				}
 			},
 			"response": []
