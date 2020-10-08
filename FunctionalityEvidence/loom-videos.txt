@@ -13,18 +13,18 @@ https://www.loom.com/share/0a28e490dc31476896b0a18774a0021d
 
 
 3) Module and Page Creation
-https://www.loom.com/share/3e0c5412b036480ca082b5c71e90ba36
+https://www.loom.com/share/79483733cc7b42eb9e43824869ea81f8
 
 
 4) Plugin Development | Adding extra cost to cart product
-https://www.loom.com/share/7795bb173a7b4160865692e215de8a71
+https://www.loom.com/share/855c3e967fc2437185791ed52963bbc1
 
 
 5) Admin Grid with Filters
-https://www.loom.com/share/7e08f75279ab4d0ea5e01818269bfed2
+https://www.loom.com/share/fda49273fa4c40e3a04c885fcad79992
 
 
-6) Sample Data
+6) Magento with sample data
 https://www.loom.com/share/742f36a5a92d46b69c9466895031daeb
 
 
@@ -33,4 +33,4 @@ https://www.loom.com/share/f15f27c192634e139fb2816cc2b5cdb9
 
 
 8) Shipping & Payment methods , API call
-https://www.loom.com/share/d7d7c8db2a6c4c3db22ce8ab421b4ef7
+https://www.loom.com/share/b3cb27ab0b7b4cbc9c87b6cc2270ae33
