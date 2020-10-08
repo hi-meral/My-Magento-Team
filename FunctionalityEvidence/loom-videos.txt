@@ -23,8 +23,14 @@ https://www.loom.com/share/7795bb173a7b4160865692e215de8a71
 5) Admin Grid with Filters
 https://www.loom.com/share/7e08f75279ab4d0ea5e01818269bfed2
 
+
 6) Sample Data
 https://www.loom.com/share/742f36a5a92d46b69c9466895031daeb
 
+
 7) Magento API (Configurable and Bundle Products)
 https://www.loom.com/share/f15f27c192634e139fb2816cc2b5cdb9
+
+
+8) Shipping & Payment methods , API call
+https://www.loom.com/share/d7d7c8db2a6c4c3db22ce8ab421b4ef7
