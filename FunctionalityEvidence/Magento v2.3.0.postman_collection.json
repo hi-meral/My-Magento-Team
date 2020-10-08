@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fe1d7210-d66d-4cae-b740-6feb43935959",
+		"_postman_id": "b76614b5-fdac-4b4a-9031-64b1dafa21f2",
 		"name": "Magento v2.3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -45,7 +45,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"value": "Bearer 3vgr4psllx4cm06rzly2mf6h4f0zfek9",
 						"type": "text"
 					}
 				],
@@ -79,7 +79,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"value": "Bearer 3vgr4psllx4cm06rzly2mf6h4f0zfek9",
 						"type": "text"
 					}
 				],
@@ -117,7 +117,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer so8lffhab2xhn35t6c4suq6zwuwu9m9m",
+						"value": "Bearer 9smao8zj8uunvcw8ahdy0wko7dneed01",
 						"type": "text"
 					}
 				],
@@ -147,6 +147,433 @@
 							"key": "fields",
 							"value": "items[name,sku,type_id]"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer\": {\n    \"email\": \"raj.mungra@eternussolutions.com\",\n    \"firstname\": \"Raj\",\n    \"lastname\": \"Mungra\",\n    \"addresses\": [\n      {\n        \"defaultShipping\": true,\n        \"defaultBilling\": true,\n        \"firstname\": \"Raj\",\n        \"lastname\": \"Mungra\",\n        \"region\": {\n          \"regionCode\": \"NY\",\n          \"region\": \"New York\",\n          \"regionId\": 43\n        },\n        \"postcode\": \"10755\",\n        \"street\": [\n          \"123 Oak Ave\"\n        ],\n        \"city\": \"Purchase\",\n        \"telephone\": \"512-555-1111\",\n        \"countryId\": \"US\"\n      }\n    ]\n  },\n  \"password\": \"espl@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token for Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"raj.mungra@eternussolutions.com\",\n  \"password\": \"espl@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/integration/customer/token",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"integration",
+						"customer",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer t2t7c2vjmze2clgdi32e4k508yizo726",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/carts/mine",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estimate Shipping Method",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer t2t7c2vjmze2clgdi32e4k508yizo726",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": {\n    \"region\": \"New York\",\n    \"region_id\": 43,\n    \"region_code\": \"NY\",\n    \"country_id\": \"US\",\n    \"street\": [\n      \"123 Oak Ave\"\n    ],\n    \"postcode\": \"10577\",\n    \"city\": \"Purchase\",\n    \"firstname\": \"Raj\",\n    \"lastname\": \"Mungra\",\n    \"customer_id\": 1,\n    \"email\": \"raj.mungra@eternussolutions.com\",\n    \"telephone\": \"(512) 555-1111\",\n    \"same_as_billing\": 0\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/carts/mine/estimate-shipping-methods",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"estimate-shipping-methods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available payment methods",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer okwwxee7498x1jncah3lwiwbounqnnza",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com//rest/default/V1/carts/mine/payment-methods",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"",
+						"rest",
+						"default",
+						"V1",
+						"carts",
+						"mine",
+						"payment-methods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set billing and shipping info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer okwwxee7498x1jncah3lwiwbounqnnza",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"addressInformation\": {\n    \"shipping_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"Raj\",\n      \"lastname\": \"Mungra\",\n      \"email\": \"raj.mungra@eternussolutions.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"billing_address\": {\n      \"region\": \"New York\",\n      \"region_id\": 43,\n      \"region_code\": \"NY\",\n      \"country_id\": \"US\",\n      \"street\": [\n        \"123 Oak Ave\"\n      ],\n      \"postcode\": \"10577\",\n      \"city\": \"Purchase\",\n      \"firstname\": \"Raj\",\n      \"lastname\": \"Mungra\",\n      \"email\": \"raj.mungra@eternussolutions.com\",\n      \"telephone\": \"512-555-1111\"\n    },\n    \"shipping_carrier_code\": \"simpleshipping\",\n    \"shipping_method_code\": \"simpleshipping\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/carts/mine/shipping-information",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"shipping-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Payment and create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer okwwxee7498x1jncah3lwiwbounqnnza",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"paymentMethod\": {\n    \"method\": \"simplepayment\"\n  },\n  \"billing_address\": {\n    \"email\": \"raj.mungra@eternussolutions.com\",\n    \"region\": \"New York\",\n    \"region_id\": 43,\n    \"region_code\": \"NY\",\n    \"country_id\": \"US\",\n    \"street\": [\n      \"123 Oak Ave\"\n    ],\n    \"postcode\": \"10577\",\n    \"city\": \"Purchase\",\n    \"telephone\": \"512-555-1111\",\n    \"firstname\": \"Raj\",\n    \"lastname\": \"Mungra\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/carts/mine/payment-information",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"carts",
+						"mine",
+						"payment-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Get Order by OrderId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1czb7ovyvqaodh2pb46dxph0j1gr97b5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invoice for an Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1czb7ovyvqaodh2pb46dxph0j1gr97b5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"capture\": true,\n  \"notify\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/order/1/invoice",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"order",
+						"1",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Get Invoice by InvoiceId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1czb7ovyvqaodh2pb46dxph0j1gr97b5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/invoices/1",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"invoices",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shipment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1czb7ovyvqaodh2pb46dxph0j1gr97b5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"order_item_id\": 1,\n      \"qty\": 1\n    }\n  ],\n  \"tracks\": [\n    {\n      \"track_number\": \"1S-9876543210\",\n      \"title\": \"ESPL Simple Shipping Method\",\n      \"carrier_code\": \"simpleshipping\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/order/1/ship",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"order",
+						"1",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shipment by Shipment Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1czb7ovyvqaodh2pb46dxph0j1gr97b5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost.magento230.com/rest/V1/shipment/1",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						"magento230",
+						"com"
+					],
+					"path": [
+						"rest",
+						"V1",
+						"shipment",
+						"1"
 					]
 				}
 			},

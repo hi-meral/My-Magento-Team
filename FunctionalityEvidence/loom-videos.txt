@@ -21,4 +21,13 @@ There are two ways to get access token and call REST API from postman.
 
 	2. Call REST API by generating token for admin using Post API call
 		https://www.loom.com/share/3d1cf7bcd94947a2b01e0f0f2e819d77
+
+6) Capstone Project
+- Create Custom Shipment Method and Payment Gateway
+- Create Order using this payment method and shipment method
+- Create Invoice and Shipment using Mahento Rest API framework
+
+https://www.loom.com/share/8a9dd0cf28db4114aa86c6ee0a007dbb
+
+NOTE: Pushed POSTMAN collection for reference.
  
