@@ -1,1 +1,1 @@
-# Espl-Magento
+# My Magento Team
